@@ -40,10 +40,6 @@ Contributions are welcome! If you have ideas for improvements, bug fixes, or new
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
-## Acknowledgments
-
-- Hat tip to [GitHub](https://github.com/) for providing an incredible platform for collaborative development.
-
 ## Support
 
 For any questions, issues, or feedback, please open an [issue](https://github.com/metriccoders/metriccoders_ml_pypi/issues).
