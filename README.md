@@ -1,4 +1,4 @@
-# Package Name: Metric Coders Model Loader
+# Metric Coders Model Loader
 
 ## Overview
 
