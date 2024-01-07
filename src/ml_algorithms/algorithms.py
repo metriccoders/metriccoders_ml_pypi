@@ -1,18 +1,38 @@
 import requests
-
-ROOT_MODEL_URL = "https://raw.githubusercontent.com/metriccoders/ml-models/main/"
-
-
-model_name = "https://raw.githubusercontent.com/metriccoders/ml-models/main/rf_classifier_iris.joblib"
-
-
-def load_model(url = model_name):
-    r = requests.get(url)
-
-    if r.status_code == 200:
-        return r.content
-    else:
-        print("Unable to load the model: ", r.status_code)
+from sklearn.pipeline import Pipeline
+from sklearn.datasets import load_iris
+import joblib
+from io import BytesIO
 
 
-load_model(model_name)
+class MLPowerEngine:
+    """
+    A class handling models
+    
+    Attributes:
+        model_path (str): Raw github path to the model
+    
+    Methods:
+        load_model(): Loads the pipeline of model
+    
+    """
+    def __init__(self, model_path) -> None:
+        """
+        Initializes a new instance of MLPowerEngine class
+        
+        Args:
+            model_path (str): Raw github path to the model
+        """
+        self.model_path = model_path
+
+    def load_model(self):
+        """
+            Fetches the model stored on github and loads the pipeline
+        """
+        if self.model_path != "" or self.model_path != None:
+            r = requests.get(self.model_path)
+
+            if r.status_code == 200:
+                return joblib.load(BytesIO(r.content))
+            else:
+                print("Unable to load the model: ", r.status_code)

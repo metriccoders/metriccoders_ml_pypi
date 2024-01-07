@@ -22,13 +22,17 @@ pip install metriccoders_ml
 ### Load a Model from GitHub
 
 ```python
-from ml_algorithms import algorithms
+from ml_algorithms.algorithms import MLPowerEngine
+from sklearn.datasets import load_iris
 
 # Specify the GitHub repository URL
 repo_url = "https://github.com/metriccoders/ml-models/blob/main/classifiers/discriminant_analysis_109/model0.437902612044043_False_0.0029324921266509207/model.joblib"
 
 # Load the model from GitHub
-model = algorithms.load_model(repo_url)
+engine = MLPowerEngine(repo_url)
+ml_engine = engine.load_model()
+iris = load_iris()
+print(ml_engine.predict(iris.data))
 ```
 
 
