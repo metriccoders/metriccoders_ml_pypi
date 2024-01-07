@@ -26,7 +26,7 @@ from ml_algorithms.algorithms import MLPowerEngine
 from sklearn.datasets import load_iris
 
 # Specify the GitHub repository URL
-repo_url = "https://github.com/metriccoders/ml-models/blob/main/classifiers/discriminant_analysis_109/model0.437902612044043_False_0.0029324921266509207/model.joblib"
+repo_url = "https://raw.githubusercontent.com/metriccoders/ml-models/main/classifiers/adaboostclassifier_10/model64_0.32271997615954084_SAMME.R/model.joblib"
 
 # Load the model from GitHub
 engine = MLPowerEngine(repo_url)
