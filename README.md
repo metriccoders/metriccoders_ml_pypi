@@ -40,6 +40,12 @@ print(ml_engine.predict(iris.data))
 
 Contributions are welcome! If you have ideas for improvements, bug fixes, or new features, feel free to submit a pull request.
 
+### How to run unittest
+```bash
+python -m unittest discover
+```
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
